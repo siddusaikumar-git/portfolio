@@ -12,12 +12,13 @@ import { ProjectsService } from './projects.service';
 export class ProjectsComponent implements OnInit, OnDestroy{
 
   projects: Project[];
-  lightMode: boolean = true;
+  lightMode: boolean;
   lightModeSub: Subscription;
 
   constructor(private projectService: ProjectsService, private headerService: HeaderService) {}
 
   ngOnInit() {
+    this.lightMode = true;
     this.projects = this.projectService.getProjects();
       this.lightModeSub = this.headerService.lightModeEmitter.subscribe(
       lightMode => {

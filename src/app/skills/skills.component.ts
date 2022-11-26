@@ -12,12 +12,13 @@ import { SkillsService } from './skills.service';
 export class SkillsComponent implements OnInit, OnDestroy{
 
   skills: Skill[];
-  lightMode: boolean = true;
+  lightMode: boolean;
   lightModeSub: Subscription;
   
   constructor(private skillsService: SkillsService, private headerService: HeaderService) {}
 
   ngOnInit(): void {
+    this.lightMode = true;
     this.skills = this.skillsService.getSkills();
       this.lightModeSub = this.headerService.lightModeEmitter.subscribe(
       lightMode => {

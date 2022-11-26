@@ -8,7 +8,7 @@ import { HeaderService } from './header.service';
 })
 export class HeaderComponent implements OnInit{
   collapsed = true;
-  light: boolean = true;
+  light: boolean;
   // @Output() lightMode: EventEmitter<boolean> = new EventEmitter();
 
   constructor(private headerService: HeaderService){}
@@ -18,7 +18,6 @@ export class HeaderComponent implements OnInit{
   }
   onClick(){
     this.light = !this.light;
-    console.log(this.light);
     // this.lightMode.emit(this.light);
     this.headerService.lightModeEmitter.next(this.light);
   }

@@ -10,11 +10,12 @@ import { Project } from '../project.model';
 })
 export class ProjectComponent {
 @Input() project: Project;
-  lightMode: boolean = true;
+  lightMode: boolean;
   lightModeSub: Subscription;
   constructor(private headerService: HeaderService){}
 
   ngOnInit(): void {
+    this.lightMode = true;
     this.lightModeSub = this.headerService.lightModeEmitter.subscribe(
       lightMode => {
         this.lightMode = lightMode;

@@ -10,11 +10,12 @@ import { HeaderService } from '../header/header.service';
 })
 export class ContactComponent implements OnInit, OnDestroy{
   @ViewChild("f", {static: false}) slForm: NgForm;
-  lightMode: boolean = true;
+  lightMode: boolean;
   lightModeSub: Subscription;
   constructor(private headerService: HeaderService){}
 
   ngOnInit(): void {
+    this.lightMode = true;
     this.lightModeSub = this.headerService.lightModeEmitter.subscribe(
       lightMode => {
         this.lightMode = lightMode;
