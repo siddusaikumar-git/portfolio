@@ -1,0 +1,16 @@
+.black {
+    /* background-color: rgb(83, 80, 80); */
+    background-color: #171c28;
+}
+
+.white {
+    background-color: white;
+}
+
+.text-black {
+    color:black;
+}
+
+.text-white {
+    color:white;
+}

@@ -1,0 +1,23 @@
+#image {
+    width: auto !important; /*Keep the aspect ratio of the image*/
+height: 140px !important;
+margin: 0 auto 1em auto; /*Center the image*/
+}
+
+.black {
+    /* background-color: rgb(83, 80, 80); */
+    background-color: #171c28;
+}
+
+.white {
+    /* background-color: aliceblue; */
+    background-color: #e3f2fd;
+}
+
+.text-black {
+    color:black;
+}
+
+.text-white {
+    color:white;
+}

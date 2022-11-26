@@ -1,0 +1,17 @@
+.black {
+    /* background-color: rgb(83, 80, 80); */
+    background-color: #171c28;
+}
+
+.white {
+    /* background-color: aliceblue; */
+    background-color: #e3f2fd;
+}
+
+.text-black {
+    color:black;
+}
+
+.text-white {
+    color:white;
+}

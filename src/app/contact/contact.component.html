@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-xs-12" style="text-align: center;">
+        <h2 [ngClass]="{'text-black' : lightMode, 'text-white': !lightMode}"> 
+                Thank you for visiting
+        </h2>
+    </div>
+</div>
+
+<br>
+<body [ngClass]="{'text-black' : lightMode, 'text-white': !lightMode, 'white':lightMode, 'black':!lightMode}">
+    <div class="center">
+        <form>
+            <div class="input-group mb-3" >
+                <span class="input-group-text" id="basic-addon1">Name</span>
+                <input type="text" class="form-control" placeholder="Your name" aria-label="name" aria-describedby="basic-addon1">
+                </div>
+                
+                <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Your email" aria-label="Recipient's email" aria-describedby="basic-addon2">
+                <span class="input-group-text" id="basic-addon2">Email</span>
+                </div>
+            <div class="input-group">
+                <span class="input-group-text">Message</span>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </div>
+    <br><br><br><br><br><br><br>
+</body>
+
+
+
+
+
+
+        
+
+

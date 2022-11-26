@@ -1,0 +1,36 @@
+
+<!-- <nav class="navbar" style="background-color:  #e3f2fd;"> -->
+<nav class="navbar" [ngClass]="{'white' : light, 'black': !light}">
+
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="margin-left: 10px;" [ngClass]="{'text-black' : light, 'text-white': !light}">
+        <img src="https://github.com/siddusaikumar-git/developerFolio/blob/master/public/android-chrome-384x384.png?raw=true" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+        Sai Kumar Siddu
+      </a>
+      <ul class="nav justify-content-end">
+        <div *ngIf="light; else templateName">
+            <li class="nav-item" (click)="onClick()">
+                <a class="nav-link"  style="cursor: pointer; color:black;"><i class="fa-solid fa-moon fa-2x"></i></a>
+            </li>
+        </div>
+        <ng-template #templateName>
+            <li class="nav-item" (click)="onClick()">
+                <a class="nav-link"  style="cursor: pointer; color:rgb(255, 179, 0);"><i class="fa-solid fa-sun fa-2x"></i></a>
+            </li>
+        </ng-template>
+          
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/background" style="cursor: pointer;" [ngClass]="{'text-black' : light, 'text-white': !light}">Background</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/projects" style="cursor: pointer;" [ngClass]="{'text-black' : light, 'text-white': !light}">Projects</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/skills" style="cursor: pointer;" [ngClass]="{'text-black' : light, 'text-white': !light}">Skills</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/contact" style="cursor: pointer;" [ngClass]="{'text-black' : light, 'text-white': !light}">Contact</a>
+        </li>
+      </ul>
+    </div>
+</nav>

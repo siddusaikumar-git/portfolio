@@ -1,0 +1,8 @@
+<!-- <div class="card" style="width: 12rem;height: 10rem; text-align: center;"> -->
+<div class="card" style="width: 12rem;height: 10rem; text-align: center;" [ngClass]="{'text-black' : lightMode, 'text-white': !lightMode, 'white':lightMode, 'black':!lightMode}">
+    <i class="{{ skill.skillFabAwesomeName }} fa-6x"></i>
+    <h3>{{ skill.skillName }}</h3>
+    <div class="progress" style="margin-left: 5px; margin-right: 5px;">
+        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Info striped example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+</div>
