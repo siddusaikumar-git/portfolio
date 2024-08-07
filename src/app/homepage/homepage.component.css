@@ -1,12 +1,18 @@
 div.font {
-    font-size: large;
+  font-size: large;
 }
 
-
 .text-black {
-    color:black;
+  color: black;
 }
 
 .text-white {
-    color:white;
+  color: white;
+}
+.main {
+  /* margin-top: 3rem; */
+}
+
+.img-fluid {
+  border-radius: 1rem;
 }

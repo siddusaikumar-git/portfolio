@@ -1,12 +1,15 @@
 <!-- <app-header (lightMode)="onClick($event)"></app-header> -->
-<app-header></app-header>
-<!-- <div style="background-color:white;"> -->
-<div [ngClass]="{'white' :lightMode, 'black': !lightMode}">
-  <br>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <router-outlet></router-outlet>
+<div class="body" [ngClass]="{ white: lightMode, black: !lightMode }">
+  <div class="header">
+    <app-header></app-header>
+  </div>
+  <!-- <div style="background-color:white;"> -->
+  <div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <router-outlet></router-outlet>
+        </div>
       </div>
     </div>
   </div>

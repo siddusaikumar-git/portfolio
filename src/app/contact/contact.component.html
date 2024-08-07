@@ -1,40 +1,57 @@
 <div class="row">
-    <div class="col-xs-12" style="text-align: center;">
-        <h2 [ngClass]="{'text-black' : lightMode, 'text-white': !lightMode}"> 
-                Thank you for visiting
-        </h2>
-    </div>
+  <div class="col-xs-12" style="text-align: center">
+    <h2 [ngClass]="{ 'text-black': lightMode, 'text-white': !lightMode }">
+      Thank you for visiting
+    </h2>
+  </div>
+
+  <br />
+  <main class="form-signin" id="main">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="form-floating form-group">
+        <input
+          type="name"
+          class="form-control"
+          id="name"
+          name="name"
+          placeholder="Name"
+          ngModel
+          required
+        />
+        <label for="name">Name</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="Email"
+          ngModel
+          required
+          email
+        />
+        <label for="email">Email</label>
+      </div>
+      <div class="form-floating">
+        <textarea
+          type="message"
+          class="form-control"
+          id="message"
+          name="message"
+          placeholder="Messaage"
+          ngModel
+          required
+          maxlength="300"
+        ></textarea>
+        <label for="message">Message</label>
+      </div>
+      <hr />
+
+      <button class="w-100 btn btn-lg btn-success" type="submit">Send</button>
+    </form>
+    <!-- <ng-template [ngIf]="sending"> -->
+    <h4 [ngStyle]="{ color: messageColor }">{{ message }}</h4>
+    <!-- </ng-template> -->
+  </main>
 </div>
-
-<br>
-<body [ngClass]="{'text-black' : lightMode, 'text-white': !lightMode, 'white':lightMode, 'black':!lightMode}">
-    <div class="center">
-        <form>
-            <div class="input-group mb-3" >
-                <span class="input-group-text" id="basic-addon1">Name</span>
-                <input type="text" class="form-control" placeholder="Your name" aria-label="name" aria-describedby="basic-addon1">
-                </div>
-                
-                <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Your email" aria-label="Recipient's email" aria-describedby="basic-addon2">
-                <span class="input-group-text" id="basic-addon2">Email</span>
-                </div>
-            <div class="input-group">
-                <span class="input-group-text">Message</span>
-                <textarea class="form-control" aria-label="With textarea"></textarea>
-            </div>
-            <br>
-            <button type="submit" class="btn btn-primary">Send</button>
-        </form>
-    </div>
-    <br><br><br><br><br><br><br>
-</body>
-
-
-
-
-
-
-        
-
-

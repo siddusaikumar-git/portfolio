@@ -1,16 +1,28 @@
 .black {
-    /* background-color: rgb(83, 80, 80); */
-    background-color: #171c28;
+  /* background-color: rgb(83, 80, 80); */
+  background-color: #171c28;
 }
 
 .white {
-    background-color: white;
+  background-color: white;
+  /* background-image: url("src/assets/bg_img.jpg"); */
+  /* background-size: cover; */
+}
+
+.container {
+  margin-top: 3%;
 }
 
 .text-black {
-    color:black;
+  color: black;
 }
 
 .text-white {
-    color:white;
+  color: white;
+}
+
+.body {
+  height: 100vh;
+  overflow-y: scroll;
+  position: relative;
 }

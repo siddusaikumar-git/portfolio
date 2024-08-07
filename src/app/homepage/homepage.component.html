@@ -1,37 +1,67 @@
-<div>
-    <br><br><br>
-</div>
-<div class="row">
+<main class="main">
+  <div class="row">
     <div class="col-6">
-        <img [src]="imagePath" class="img-fluid" alt="..." style="width: 100%; height: 100%">
+      <img [src]="imagePath" class="img-fluid" alt="..." style="width: 80%" />
     </div>
     <div class="col-6">
-        <div style="text-align: center;">
-            <h1 [ngClass]="{'text-black' : lightMode, 'text-white': !lightMode}"> Hi all, I'am Sai Kumar</h1>
-            <div class="font" [ngClass]="{'text-black' : lightMode, 'text-white': !lightMode}">
-                <p>A passionate Full Stack Software Developer having an experience of building Web applications with Angular, Python, Java and some other cool libraries and frameworks.</p>
-            </div>
-            <div class="row">
-                <ul class="nav justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/siddusaikumar-git/" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.linkedin.com/in/siddusaikumar/" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mailto: siddusaikumar2021@gmail.com"><i class="fa-solid fa-envelope fa-2x"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://linktr.ee/siddusaikumar" target="_blank"><i class="fa-sharp fa-solid fa-tree fa-2x"></i></a>
-                    </li>
-                  </ul>
-            </div>
-            <br>
-            
-                <a href="https://drive.google.com/file/d/1POxuxCjqJ2T5oeepPbPT4TLtGOUl0owp/view" target="_blank"><button type="button" class="btn btn-outline-success">Resume</button></a>
+      <div style="text-align: center; padding-top: 10%">
+        <h1 [ngClass]="{ 'text-black': lightMode, 'text-white': !lightMode }">
+          Hi 👋, I'am Sai Kumar
+        </h1>
+        <div
+          class="font"
+          [ngClass]="{ 'text-black': lightMode, 'text-white': !lightMode }"
+        >
+          <p>
+            A passionate ML Engineer and Full Stack Software Developer having an
+            experience of ML Modeling, ETL pipelines, and building Web
+            applications with Python, Flask, Django, React, Angular, Node, Java
+            and some other cool libraries and frameworks.
+          </p>
         </div>
-        
-    </div>
-</div>
+        <div class="row">
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://github.com/siddusaikumar-git/"
+                target="_blank"
+                ><i class="fa-brands fa-github fa-2x"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://www.linkedin.com/in/siddusaikumar/"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin fa-2x"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mailto: siddusaikumar2021@gmail.com"
+                ><i class="fa-solid fa-envelope fa-2x"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://linktr.ee/siddusaikumar"
+                target="_blank"
+                ><i class="fa-sharp fa-solid fa-tree fa-2x"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <br />
 
+        <a
+          href="https://drive.google.com/file/d/1POxuxCjqJ2T5oeepPbPT4TLtGOUl0owp/view"
+          target="_blank"
+          ><button type="button" class="btn btn-outline-success">
+            Resume
+          </button></a
+        >
+      </div>
+    </div>
+  </div>
+</main>

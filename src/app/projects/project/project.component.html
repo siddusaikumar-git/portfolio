@@ -1,22 +1,33 @@
-<!-- <div class="panel panel-default">
-    <div class="panel-heading">
-        <img 
-            [src] = "project.projectImagePath"
-            alt="{{ project.projectName }}" 
-            class="img-responsive" 
-            style="height:150px; max-height: 150px; max-width:230px; width: 230px;"
-            >
+<div
+  class="card"
+  style="width: 15rem; height: 20rem"
+  [ngClass]="{
+    'text-black': lightMode,
+    'text-white': !lightMode,
+    white: lightMode,
+    black: !lightMode
+  }"
+>
+  <img
+    [src]="project.projectImagePath"
+    class="card-img-top"
+    id="image"
+    alt="{{ project.projectName }}"
+    style="width: 15rem; height: 8rem"
+  />
+  <div class="card-body">
+    <h6 class="card-title">{{ project.projectName }}</h6>
+    <p class="card-text">{{ project.projectDesc }}</p>
+    <div class="buttons">
+      <a
+        href="{{ project.projectPath }}"
+        class="btn btn-primary"
+        id="card-button"
+        >Project link</a
+      >
+      <div *ngIf="project.projectLiveUrl">
+        <a class="btn btn-info" id="card-button">Live link</a>
+      </div>
     </div>
-    <div class="panel-body">{{ project.projectName }}</div>
-    <div class="panel-footer"> {{ project.projectDesc }} </div>
-  </div> -->
-
-
-<div class="card" style="width: 15rem;height: 20rem;" [ngClass]="{'text-black' : lightMode, 'text-white': !lightMode, 'white':lightMode, 'black':!lightMode}">
-    <img [src]="project.projectImagePath" class="card-img-top" alt="{{ project.projectName }}" style="width: 15rem; height: 8rem;">
-    <div class="card-body">
-      <h6 class="card-title">{{ project.projectName }}</h6>
-      <p class="card-text">{{ project.projectDesc }}</p>
-      <a href="{{ project.projectPath }}" class="btn btn-primary">Project path</a>
-    </div>
+  </div>
 </div>
